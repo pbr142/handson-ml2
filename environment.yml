@@ -19,7 +19,7 @@ dependencies:
   - opencv=4.5 # used only in chapter 18 by TF Agents for image preprocessing
   - pandas=1.2 # data analysis and manipulation tool
   - pillow=8.1 # image manipulation library, (used by matplotlib.image.imread)
-  - pip # Python's package-management system
+  - pip<20.3 # Python's package-management system
   - py-xgboost=0.90 # used only in chapter 7 for optimized Gradient Boosting
   - pyglet=1.5 # used only in chapter 18 to render environments
   - pyopengl=3.1 # used only in chapter 18 to render environments
