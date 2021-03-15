@@ -22,4 +22,5 @@ datasets/titanic
 datasets/words
 datasets/jsb_chorales
 
-.vscode/
+.vscode
+.virtual_documents
