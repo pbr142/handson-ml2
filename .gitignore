@@ -1,4 +1,6 @@
 .virtual_documents/
+exercises/gpt2_shakespeare
+runs/
 *.bak
 *.bak.*
 *.ckpt
@@ -6,6 +8,7 @@
 *.pyc
 .DS_Store
 .ipynb_checkpoints
+.vscode/
 checkpoint
 logs/*
 tf_logs/*
@@ -21,5 +24,5 @@ datasets/spam
 datasets/titanic
 datasets/words
 datasets/jsb_chorales
-
 .vscode/
+

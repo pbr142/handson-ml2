@@ -19,7 +19,7 @@ dependencies:
   - opencv=4.5 # used only in chapter 18 by TF Agents for image preprocessing
   - pandas=1.2 # data analysis and manipulation tool
   - pillow=8.1 # image manipulation library, (used by matplotlib.image.imread)
-  - pip # Python's package-management system
+  - pip<20.3 # Python's package-management system
   - py-xgboost=0.90 # used only in chapter 7 for optimized Gradient Boosting
   - pyglet=1.5 # used only in chapter 18 to render environments
   - pyopengl=3.1 # used only in chapter 18 to render environments
@@ -40,7 +40,7 @@ dependencies:
     - tensorflow-datasets==3.0.0 # datasets repository, ready to use
     - tensorflow-hub==0.9.0 # trained ML models repository, ready to use
     - tensorflow-probability==0.12.1 # Optional. Probability/Stats lib.
-    - tensorflow-serving-api==2.4.1 # or tensorflow-serving-api-gpu if gpu
+    - tensorflow-serving-api-gpu==2.4.1 # or tensorflow-serving-api-gpu if gpu
     - tensorflow==2.4.1 # Deep Learning library
     - tf-agents==0.7.1 # Reinforcement Learning lib based on TensorFlow
     - tfx==0.27.0 # platform to deploy production ML pipelines

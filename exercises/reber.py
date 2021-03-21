@@ -109,6 +109,15 @@ def corrupt_sentence(sentence: Tuple[Tuple], edges: Tuple[Tuple], n_corruptions:
 
 
 def flatten_embedded_edges(edges: Tuple[Tuple]) -> Tuple[Tuple]:
+	"""Function to flatten a Embedded Reber Grammer where the Tuple of Edges representation could contain nested
+	structures, i.e. an element of the Tuple is itself again a Tuple of Tuples
+
+	Args:
+		edges (Tuple[Tuple]): Reber grammer in possibly nested Tuple of edges representation
+
+    Returns:
+		Tuple[Tuple]: Flattened Tuple of edges
+	"""
 	new_edges = []
 	for start_node, end_node, letter in edges:
 		if isinstance(letter, tuple):
@@ -121,3 +130,17 @@ def flatten_embedded_edges(edges: Tuple[Tuple]) -> Tuple[Tuple]:
 			new_edges.append([start_node, end_node, letter])
 	new_edges = [(s,e,l) for s,e,l in new_edges]
 	return tuple(new_edges)
+
+
+def string_to_ids(s: str, allowed_chars: str) -> List[int]:
+	"""Translate string into list of indices, starting at 1, as defined in allows_chars.
+
+	Args:
+		s (str): Input string to Translate
+		allowed_chars (str): Allowed characters in the order that the output should be returned
+
+	Returns:
+		List[int]: Integer representation of the input string, starting at 1 for the first letter in allowed_chars, and so forth
+	"""
+
+	return [allowed_chars.index(c)+1 for c in s]
